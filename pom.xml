@@ -14,6 +14,13 @@
     <packaging>pom</packaging>
     <name>Example BigConnect Plugins</name>
 
+    <repositories>
+        <repository>
+            <id>org.bigconnect</id>
+            <url>http://bits.bigconnect.io/maven2/releases/</url>
+        </repository>
+    </repositories>
+
     <properties>
         <java.source.version>1.8</java.source.version>
         <java.target.version>1.8</java.target.version>
