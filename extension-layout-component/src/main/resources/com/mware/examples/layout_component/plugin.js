@@ -1,17 +1,17 @@
 require(['public/v1/api'], function(bc) {
 
     bc.registry.registerExtension('org.bigconnect.layout.component', {
-        identifier: 'com.mware.layout.body',
+        identifier: 'org.bigconnect.layout.body',
         children: [
             {
-                ref: 'com.mware.layout.text',
+                ref: 'org.bigconnect.layout.text',
                 model: 'Example of text layout component with fixed string',
                 className: 'examples-layout_component-subheader'
             },
-            { componentPath: 'detail/properties/properties', className: 'com.mware-properties', modelAttribute: 'data' },
-            { componentPath: 'comments/comments', className: 'com.mware-comments', modelAttribute: 'data' },
-            { componentPath: 'detail/relationships/relationships', className: 'com.mware-relationships', modelAttribute: 'data' },
-            { componentPath: 'detail/text/text', className: 'com.mware-texts' }
+            { componentPath: 'detail/properties/properties', className: 'org-bigconnect-properties', modelAttribute: 'data' },
+            { componentPath: 'comments/comments', className: 'org-bigconnect-comments', modelAttribute: 'data' },
+            { componentPath: 'detail/relationships/relationships', className: 'org-bigconnect-relationships', modelAttribute: 'data' },
+            { componentPath: 'detail/text/text', className: 'org-bigconnect-texts' }
         ]
     });
 
@@ -21,10 +21,10 @@ require(['public/v1/api'], function(bc) {
             constraints: ['width', 'height'],
             contexts: ['popup']
         },
-        identifier: 'com.mware.layout.body',
+        identifier: 'org.bigconnect.layout.body',
         children: [
             {
-                componentPath: 'com.mware/examples/layout_component/popupBody',
+                componentPath: 'com/mware/examples/layout_component/popupBody',
                 className: 'examples-layout_component-popupbody'
             }
         ]

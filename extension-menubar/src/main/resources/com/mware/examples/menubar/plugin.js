@@ -4,7 +4,7 @@ require(['public/v1/api'], function(bc) {
         title: i18n('com.mware.examples.menubar.title'),
         identifier: 'com.mware-examples-menubar',
         action: {
-            type: 'pane',
+            type: 'full',
             componentPath: 'com/mware/examples/menubar/Pane'
         },
         welcomeTemplatePath: 'hbs!com/mware/examples/menubar/welcome',
