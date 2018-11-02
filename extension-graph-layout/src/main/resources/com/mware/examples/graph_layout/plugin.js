@@ -33,5 +33,5 @@ require(['public/v1/api', 'util/retina'], function(bc, retina) {
         return this;
     };
 
-    bc.registry.registerExtension('com.mware.graph.layout', MyLayout);
+    bc.registry.registerExtension('org.bigconnect.graph.layout', MyLayout);
 });

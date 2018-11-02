@@ -1,6 +1,6 @@
 require(['public/v1/api'], function(bc) {
 
-    bc.registry.registerExtension('com.mware.activity', {
+    bc.registry.registerExtension('org.bigconnect.activity', {
         type: 'com-mware-examples-activity',
         kind: 'longRunningProcess',
         titleRenderer: function(el, process) {

@@ -8,5 +8,5 @@ require(['public/v1/api'], function(bc) {
     doRandomSelection.identifier = 'com.mware-examples-graph-selection';
     doRandomSelection.visibility = 'always';
 
-    bc.registry.registerExtension('com.mware.graph.selection', doRandomSelection);
+    bc.registry.registerExtension('org.bigconnect.graph.selection', doRandomSelection);
 });

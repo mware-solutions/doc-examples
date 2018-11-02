@@ -1,11 +1,11 @@
 require(['public/v1/api'], function(bc) {
 
-    bc.registry.registerExtension('com.mware.web.dashboard.item', {
+    bc.registry.registerExtension('org.bigconnect.web.dashboard.item', {
         title: 'Concept Type Counts',
         description: 'Show total counts for entity types',
         identifier: 'com.mware-examples-dashboard-item',
         report: {
-            defaultRenderer: 'com.mware-pie',
+            defaultRenderer: 'org-bigconnect-pie',
             endpoint: '/vertex/search',
             endpointParameters: {
                 q: '*',
@@ -15,19 +15,19 @@ require(['public/v1/api'], function(bc) {
                     {
                         type: 'term',
                         name: 'field',
-                        field: 'http://bigconnect.io#conceptType'
+                        field: ONTOLOGY_CONSTANTS.PROP_CONCEPT_TYPE
                     }
                 ].map(JSON.stringify)
             }
         }
     });
 
-    bc.registry.registerExtension('com.mware.web.dashboard.item', {
+    bc.registry.registerExtension('org.bigconnect.web.dashboard.item', {
         title: 'React Component',
         description: 'Example React Component',
         identifier: 'com.mware-examples-dashboard-item-react',
-        componentPath: 'com.mware/examples/dashboard_item/React',
-        configurationPath: 'com.mware/examples/dashboard_item/Config'
+        componentPath: 'com/mware/examples/dashboard_item/React',
+        configurationPath: 'com/mware/examples/dashboard_item/Config'
     });
 
 });

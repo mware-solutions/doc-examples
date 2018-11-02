@@ -10,7 +10,7 @@ define([
     function DecorationPopover() {
 
         this.before('initialize', function(node, config) {
-            config.template = '/com.mware/examples/graph_node_decoration/template'
+            config.template = '/com/mware/examples/graph_node_decoration/template'
             this.after('setupWithTemplate', function() {
             })
         });

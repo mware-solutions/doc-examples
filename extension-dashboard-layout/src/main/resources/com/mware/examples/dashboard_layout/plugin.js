@@ -1,6 +1,6 @@
 require(['public/v1/api'], function(bc) {
 
-    bc.registry.registerExtension('com.mware.web.dashboard.layout', [
+    bc.registry.registerExtension('org.bigconnect.web.dashboard.layout', [
         {
             extensionId: 'com.mware-examples-dashboard-item-react',
             configuration: { metrics: { x: 5, y: 0, width: 4, height: 3 } }

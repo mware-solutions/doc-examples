@@ -1,7 +1,7 @@
 require(['public/v1/api'], function(bc) {
 
     bc.connect().then(function(api) {
-        bc.registry.registerExtension('com.mware.vertex.menu', {
+        bc.registry.registerExtension('org.bigconnect.vertex.menu', {
             label: i18n('com.mware.examples.vertex.menu.google'),
             event: 'context-menu-search-google',
             selection: 1,
@@ -21,7 +21,7 @@ require(['public/v1/api'], function(bc) {
             }
         });
 
-        bc.registry.registerExtension('com.mware.edge.menu', {
+        bc.registry.registerExtension('org.bigconnect.edge.menu', {
             label: i18n('com.mware.examples.edge.menu.delete'),
             event: 'context-menu-delete-edge',
             cls: 'context-menu-danger',

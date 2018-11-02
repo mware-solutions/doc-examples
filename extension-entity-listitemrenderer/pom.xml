@@ -16,7 +16,7 @@
     <dependencies>
         <dependency>
             <groupId>com.mware</groupId>
-            <artifactId>bc-web</artifactId>
+            <artifactId>bc-web-base</artifactId>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>

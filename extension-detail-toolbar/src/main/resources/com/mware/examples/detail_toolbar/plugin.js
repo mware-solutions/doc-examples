@@ -1,6 +1,6 @@
 require(['public/v1/api'], function(bc) {
 
-    bc.registry.registerExtension('com.mware.detail.toolbar', {
+    bc.registry.registerExtension('org.bigconnect.detail.toolbar', {
         title: i18n('com.mware.examples.detail_toolbar.google'),
         event: 'detail-toolbar-google',
         canHandle: function(objects) {

@@ -24,11 +24,15 @@
     <properties>
         <java.source.version>1.8</java.source.version>
         <java.target.version>1.8</java.target.version>
-        <bc.version>3.4.0</bc.version>
+        <bc.version>3.5.0</bc.version>
         <examples.version>0.1-SNAPSHOT</examples.version>
     </properties>
 
     <modules>
+        <!-- Runner -->
+        <module>_run/runner</module>
+
+        <!-- Plugins, add to _run/runner/pom.xml as dependencies to include when running -->
         <module>extension-authentication</module>
         <module>extension-detail-toolbar</module>
         <module>extension-activity</module>
@@ -77,17 +81,17 @@
         <dependencies>
             <dependency>
                 <groupId>com.mware</groupId>
-                <artifactId>bc-core</artifactId>
+                <artifactId>bc-common</artifactId>
                 <version>${bc.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.mware</groupId>
-                <artifactId>bc-web</artifactId>
+                <artifactId>bc-web-base</artifactId>
                 <version>${bc.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.mware</groupId>
-                <artifactId>bc-dev-tomcat-server</artifactId>
+                <artifactId>bc-tomcat-server</artifactId>
                 <version>${bc.version}</version>
             </dependency>
             <dependency>

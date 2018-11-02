@@ -17,7 +17,7 @@ define([], function() {
             const collector = styleCollector();
 
             /**
-             * @callback org.visallo.graph.style~StyleFn
+             * @callback org.bigconnect.graph.style~StyleFn
              * @param {object} cytoscapeStyle
              * @param {function} cytoscapeStyle.selector Switch to adjusting the passed in selector string
              * @param {function} cytoscapeStyle.style Add styles to the current selector. Accepts one parameter,

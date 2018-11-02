@@ -4,14 +4,14 @@ require(['public/v1/api', 'util/retina'], function(bc, retina) {
     var onlyDecorationAlignmentsText = 'show all decoration alignments';
     var hasAllDecorationComment = function(v) {
         return _.any(v.properties, function(p) {
-            return p.name === 'http://bigconnect.io/comment#entry' &&
+            return p.name === ONTOLOGY_CONSTANTS.PROP_COMMENT_ENTRY &&
                 p.value.indexOf(onlyDecorationAlignmentsText) >= 0;
         })
     };
 
     ['top', 'center', 'bottom'].forEach(function(y, row) {
         ['left', 'center', 'right'].forEach(function(x, col) {
-            bc.registry.registerExtension('com.mware.graph.node.decoration', {
+            bc.registry.registerExtension('org.bigconnect.graph.node.decoration', {
                 applyTo: hasAllDecorationComment,
                 alignment: { h: x, v: y },
                 classes: 'customAll',

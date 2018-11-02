@@ -1,10 +1,10 @@
 require(['public/v1/api'], function(bc) {
 
-    bc.registry.registerExtension('com.mware.logout', function() {
+    bc.registry.registerExtension('org.bigconnect.logout', function() {
         var seconds = 3;
         alert('Will logout in ' + seconds + ' seconds');
         _.delay(function() {
-            visallo.connect()
+            bc.connect()
                 .then(function(connected) {
                     $(document).trigger('willLogout');
                     return connected.dataRequest('user', 'logout');

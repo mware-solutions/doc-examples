@@ -4,10 +4,10 @@ import com.google.inject.Inject;
 import com.mware.core.model.longRunningProcess.LongRunningProcessRepository;
 import com.mware.core.user.User;
 import com.mware.ge.Authorizations;
-import com.mware.web.clientapi.model.ClientApiLongRunningProcessSubmitResponse;
 import com.mware.web.framework.ParameterizedHandler;
 import com.mware.web.framework.annotations.Handle;
 import com.mware.web.framework.annotations.Required;
+import com.mware.web.model.ClientApiLongRunningProcessSubmitResponse;
 
 public class StartExample implements ParameterizedHandler {
 

@@ -1,6 +1,6 @@
 require(['public/v1/api'], function(bc) {
 
-    bc.registry.registerExtension('com.mware.layout.component', {
+    bc.registry.registerExtension('org.bigconnect.layout.component', {
         identifier: 'com.mware.layout.body',
         children: [
             {
@@ -16,7 +16,7 @@ require(['public/v1/api'], function(bc) {
     });
 
 
-    bc.registry.registerExtension('com.mware.layout.component', {
+    bc.registry.registerExtension('org.bigconnect.layout.component', {
         applyTo: {
             constraints: ['width', 'height'],
             contexts: ['popup']
