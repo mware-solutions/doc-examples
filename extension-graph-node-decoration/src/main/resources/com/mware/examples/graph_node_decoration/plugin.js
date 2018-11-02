@@ -31,10 +31,10 @@ require(['public/v1/api', 'util/retina'], function(bc, retina) {
     })
 
 
-    bc.registry.registerExtension('com.mware.graph.node.decoration', {
+    bc.registry.registerExtension('org.bigconnect.graph.node.decoration', {
         applyTo: function(v) {
             return _.any(v.properties, function(p) {
-                return p.name === 'http://bigconnect.io/comment#entry' &&
+                return p.name === ONTOLOGY_CONSTANTS.PROP_COMMENT_ENTRY &&
                     p.value.indexOf(onlyDecorationAlignmentsText) === -1 &&
                     p.value.indexOf("popover") === -1;
             })
@@ -44,7 +44,7 @@ require(['public/v1/api', 'util/retina'], function(bc, retina) {
         data: function(vertex) {
             return {
                 label: vertex.properties.reduce(function(sum, p) {
-                    if (p.name === 'http://bigconnect.io/comment#entry') {
+                    if (p.name === ONTOLOGY_CONSTANTS.PROP_COMMENT_ENTRY) {
                         return sum + 1;
                     }
                     return sum;
@@ -53,10 +53,10 @@ require(['public/v1/api', 'util/retina'], function(bc, retina) {
         }
     });
 
-    bc.registry.registerExtension('com.mware.graph.node.decoration', {
+    bc.registry.registerExtension('org.bigconnect.graph.node.decoration', {
         applyTo: function(v) {
             return _.any(v.properties, function(p) {
-                return p.name === 'http://bigconnect.io/comment#entry' &&
+                return p.name === ONTOLOGY_CONSTANTS.PROP_COMMENT_ENTRY &&
                     p.value.indexOf("popover") >= 0;
             })
         },
@@ -79,7 +79,7 @@ require(['public/v1/api', 'util/retina'], function(bc, retina) {
         }
     });
 
-    bc.registry.registerExtension('com.mware.graph.style', function(style) {
+    bc.registry.registerExtension('org.bigconnect.graph.style', function(style) {
         style
             .selector('.decoration.custom')
             .css({
